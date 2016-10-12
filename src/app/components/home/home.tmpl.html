@@ -1,0 +1,78 @@
+<div layout="column" flex="100" class="main-dashboad">
+    <div ng-bind="vm.storiesFinish">
+    </div>
+   <!--  <div ng-repeat-start="item in vm.storiesNewest">
+        <h2 ng-bind-start="item.StoryName"></h2>
+        <div>Thể Loại: <span ng-bind="item.CategoryName"></span></div>
+        <div class="chapter-name" ng-bind="item.ChapterName"></div>
+    </div>
+    <div ng-repeat-end></div>
+     <div ng-repeat-start="item in vm.storiesViewest">
+        <h2 ng-bind="item.StoryName"></h2>
+        <div>Thể Loại: <span ng-bind="item.CategoryName"></span></div>
+        <div class="chapter-name" ng-bind="item.ChapterName"></div>
+    </div>
+    <div ng-repeat-end></div> -->
+     <div ng-if ng-repeat="item in vm.storiesFinish">
+        <h2 ng-bind="item.StoryName"></h2>
+        <div>Thể Loại: <span ng-bind="item.CategoryName"></span></div>
+        <div class="chapter-name" ng-bind="item.ChapterName"></div>
+    </div>
+    <!-- <div ng-if="!vm.isLoadingViewest">
+        <h3>Mới Nhất</h3>
+        <md-grid-list md-cols-sm="1" md-cols-gt-sm="2" md-cols-md="2" md-cols-gt-md="2" md-cols-lg="4" md-cols-gt-lg="4" md-row-height-sm="340px" md-row-height-gt-sm="340px" md-row-height-md="340px" md-row-height-gt-md="340px" md-row-height-lg="340px" md-row-height-gt-lg="340px" md-gutter="20px">
+            <md-grid-tile ng-repeat-start="item in vm.storiesNewest">
+                <md-card>
+                    <div class="story-item">
+                        <img src="assets/images/avatar-5.png" class="md-card-image" alt="user avatar" ng-click="vm.gotoStory(item.StoryID)">
+                        <md-card-content>
+                            <a ng-click="vm.gotoStory(item.StoryID)"><h2 ng-bind="item.StoryName"></h2></a>
+                            <a ng-click="vm.gotoCategory(item.CategoryID)"><div>Thể Loại: <span ng-bind="item.CategoryName"></span></div></a>
+                            <a ng-click="vm.gotoAuthorName(item.AuthorName)"><div>Tác Giả: <span ng-bind="item.AuthorName"></span></div></a>
+                            <a ng-click="vm.gotoStoryDetail(item.StoryDetailID)"><div class="chapter-name" ng-bind="item.ChapterName"></div></a>
+                        </md-card-content>
+                    </div>
+                </md-card>
+            </md-grid-tile>
+            <md-grid-tile ng-repeat-end></md-grid-tile>
+        </md-grid-list>
+    </div>
+    <div ng-if="!vm.isLoadingNewest">
+        <h3>Xem Nhiều Nhất</h3>
+        <md-grid-list md-cols-sm="1" md-cols-gt-sm="2" md-cols-md="2" md-cols-gt-md="2" md-cols-lg="4" md-cols-gt-lg="4" md-row-height-sm="340px" md-row-height-gt-sm="340px" md-row-height-md="340px" md-row-height-gt-md="340px" md-row-height-lg="340px" md-row-height-gt-lg="340px" md-gutter="20px">
+            <md-grid-tile ng-repeat-start="item in vm.storiesViewest">
+                <md-card>
+                    <div class="story-item">
+                        <img src="assets/images/avatar-5.png" class="md-card-image" alt="user avatar" ng-click="vm.gotoStory(item.StoryID)">
+                        <md-card-content>
+                            <a ng-click="vm.gotoStory(item.StoryID)"><h2 ng-bind="item.StoryName"></h2></a>
+                            <a ng-click="vm.gotoCategory(item.CategoryID)"><div>Thể Loại: <span ng-bind="item.CategoryName"></span></div></a>
+                            <a ng-click="vm.gotoAuthorName(item.AuthorName)"><div>Tác Giả: <span ng-bind="item.AuthorName"></span></div></a>
+                            <a ng-click="vm.gotoStoryDetail(item.StoryDetailID)"><div class="chapter-name" ng-bind="item.ChapterName"></div></a>
+                        </md-card-content>
+                    </div>
+                </md-card>
+            </md-grid-tile>
+            <md-grid-tile ng-repeat-end></md-grid-tile>
+        </md-grid-list>
+    </div> -->
+    <div ng-if="vm.storiesFinish.length > 0">
+        <h3>Hoàn Thành Gần Nhất</h3>
+        <md-grid-list md-cols-sm="1" md-cols-gt-sm="2" md-cols-md="2" md-cols-gt-md="2" md-cols-lg="4" md-cols-gt-lg="4" md-row-height-sm="340px" md-row-height-gt-sm="340px" md-row-height-md="340px" md-row-height-gt-md="340px" md-row-height-lg="340px" md-row-height-gt-lg="340px" md-gutter="20px">
+            <md-grid-tile ng-repeat-start="item in vm.storiesFinish">
+                <md-card>
+                    <div class="story-item">
+                        <img src="assets/images/avatar-5.png" class="md-card-image" alt="user avatar" ng-click="vm.gotoStory(item.StoryID)">
+                        <md-card-content>
+                            <a ng-click="vm.gotoStory(item.StoryID)"><h2 ng-bind="item.StoryName"></h2></a>
+                            <a ng-click="vm.gotoCategory(item.CategoryID)"><div>Thể Loại: <span ng-bind="item.CategoryName"></span></div></a>
+                            <a ng-click="vm.gotoAuthorName(item.AuthorName)"><div>Tác Giả: <span ng-bind="item.AuthorName"></span></div></a>
+                            <a ng-click="vm.gotoStoryDetail(item.StoryDetailID)"><div class="chapter-name" ng-bind="item.ChapterName"></div></a>
+                        </md-card-content>
+                    </div>
+                </md-card>
+            </md-grid-tile>
+            <md-grid-tile ng-repeat-end></md-grid-tile>
+        </md-grid-list>
+    </div>
+</div>

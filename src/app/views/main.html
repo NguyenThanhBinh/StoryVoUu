@@ -1,0 +1,7 @@
+<div ng-include="'app/components/layout/menu.tmpl.html'"></div>
+<div layout="column" flex>
+    <div ng-include="'app/components/layout/toolbar.tmpl.html'"></div>
+    <md-content flex class="md-padding page-content">
+        <div ui-view="belowContent"></div>
+    </md-content>
+</div>

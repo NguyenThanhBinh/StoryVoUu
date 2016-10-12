@@ -1,0 +1,6 @@
+<div layout="column" layout-align="" class="padding-10">
+	<div ng-bind="vm.story.Introduction"></div>
+	<div ng-repeat="item in vm.chapters.slice(((vm.currentPage-1)*vm.itemsPerPage), ((vm.currentPage)*vm.itemsPerPage))" ng-click="vm.gotoStoryDetail(item.StoryDetailsID)">
+		{{ item.ChapterName }}
+	</div>
+</div>

@@ -1,0 +1,15 @@
+<md-grid-list md-cols-sm="1" md-cols-gt-sm="2" md-cols-md="2" md-cols-gt-md="2" md-cols-lg="4" md-cols-gt-lg="4" md-row-height-sm="340px" md-row-height-gt-sm="340px" md-row-height-md="340px" md-row-height-gt-md="340px" md-row-height-lg="340px" md-row-height-gt-lg="340px" md-gutter="20px">
+    <md-grid-tile ng-repeat="item in vm.storiesNewest">
+        <md-card>
+            <div class="story-item">
+                <img src="assets/images/avatars/avatar-5.png" class="md-card-image" alt="user avatar">
+                <md-card-content>
+                    <a ng-click="vm.gotoStory(item.StoryID)"><h2 ng-bind="item.StoryName"></h2></a>
+                    <a ng-click="vm.gotoCategory(item.CategoryID)"><div>Thể Loại: <span ng-bind="item.CategoryName"></span></div></a>
+                    <a ng-click="vm.gotoAuthorName(item.AuthorName)"><div>Tác Giả: <span ng-bind="item.AuthorName"></span></div></a>
+                    <a ng-click="vm.gotoStoryDetail(item.StoryDetailID)"><div class="chapter-name" ng-bind="item.ChapterName"></div></a>
+                </md-card-content>
+            </div>
+        </md-card>
+    </md-grid-tile>
+</md-grid-list>
